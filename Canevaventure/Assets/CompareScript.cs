@@ -1,6 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.UI;
 
 
 public class CompareScript : MonoBehaviour
@@ -12,6 +11,9 @@ public class CompareScript : MonoBehaviour
         monScript = GameObject.Find("Bouton_Difficult").GetComponent<DifficultScript>();
     }
 
+    [SerializeField]
+    private Text TextScore=null;
+
 
     [SerializeField]
     private Texture2D second=null;
@@ -19,11 +21,15 @@ public class CompareScript : MonoBehaviour
     private Texture2D first=null;
     [SerializeField]
     private bool bDifficult = false;
+    [SerializeField]
+    private GameObject PatronObjet=null;
 
 
     public void CompareTexture()
     {
         bDifficult = monScript.bDifficile;
+
+        second = PatronObjet.GetComponent<SpriteRenderer>().sprite.texture;
 
         Color[] firstPix = first.GetPixels();
         Color[] secondPix = second.GetPixels();
@@ -59,14 +65,22 @@ public class CompareScript : MonoBehaviour
             }
         }
         
-        fResult = (float)nEgale / (float)nTotal;
-        fResult = fResult * 10000;
-        nResult = (int)fResult;
-        fResult = (float)nResult;
-        fResult = fResult / 100;
+        if (nTotal<=0)
+        {
+            fResult = 100.00f;
+        }
+        else
+        {
+            fResult = (float)nEgale / (float)nTotal;
+            fResult = fResult * 10000;
+            nResult = (int)fResult;
+            fResult = (float)nResult;
+            fResult = fResult / 100;
+        }
+        
 
         Debug.Log("nEgale = " + nEgale + " nTotal = " + nTotal + ".");
         Debug.Log("Resultat : " + fResult + "%.");
-
+        TextScore.text = "Score : " + fResult + "%";
     }
 }
