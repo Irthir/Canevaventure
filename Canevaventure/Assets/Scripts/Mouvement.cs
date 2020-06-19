@@ -18,6 +18,10 @@ public class Mouvement : MonoBehaviour
 
     [SerializeField]
     public bool bDroite=false;
+    [SerializeField]
+    private float fTempsDroite = 1.0f;
+    [SerializeField]
+    private float fTempsDroiteMax = 1.0f;
 
     [SerializeField]
     public bool bSaut = false;
@@ -47,9 +51,15 @@ public class Mouvement : MonoBehaviour
         if (bDroite)
         {
             mouvhorizontal = 1 * MouvementVitesse * Time.deltaTime;
+            fTempsDroite -= Time.deltaTime;
+            if (fTempsDroite<=0.0f)
+            {
+                bDroite = false;
+            }
         }
         else
         {
+            fTempsDroite = fTempsDroiteMax;
             mouvhorizontal = 0.0f;
         }
 
