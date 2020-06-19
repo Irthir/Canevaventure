@@ -30,10 +30,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -88,35 +86,35 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11362}
     - Class: 114
-      Script: {instanceID: 11462}
+      Script: {instanceID: 11424}
     - Class: 114
-      Script: {instanceID: 11516}
+      Script: {instanceID: 11464}
     - Class: 114
-      Script: {instanceID: 11810}
+      Script: {instanceID: 11518}
     - Class: 114
-      Script: {instanceID: 12172}
+      Script: {instanceID: 11812}
     - Class: 114
-      Script: {instanceID: 12180}
+      Script: {instanceID: 12174}
     - Class: 114
-      Script: {instanceID: 12430}
+      Script: {instanceID: 12182}
     - Class: 114
-      Script: {instanceID: 12740}
+      Script: {instanceID: 12432}
     - Class: 114
-      Script: {instanceID: 12744}
+      Script: {instanceID: 12742}
     - Class: 114
-      Script: {instanceID: 12888}
+      Script: {instanceID: 12746}
     - Class: 114
-      Script: {instanceID: 13136}
+      Script: {instanceID: 12890}
     - Class: 114
-      Script: {instanceID: 13322}
+      Script: {instanceID: 13138}
     - Class: 114
-      Script: {instanceID: 13648}
+      Script: {instanceID: 13324}
     - Class: 114
-      Script: {instanceID: 14028}
+      Script: {instanceID: 13650}
     - Class: 114
-      Script: {instanceID: 14260}
+      Script: {instanceID: 14030}
     - Class: 114
-      Script: {instanceID: 26428}
+      Script: {instanceID: 14262}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -198,6 +196,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: GroupTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 438ff3a34cfe88174bf7afa267dcad50
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ScriptEau
   - hash:
       serializedVersion: 2
       Hash: a5781dc71a671b1ad2b38de19f24b71f
@@ -696,12 +700,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 438ff3a34cfe88174bf7afa267dcad50
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ScriptEau
   platform: 5
   scenePathNames:
   - Assets/Tilesheet/Scenes/SampleScene.unity
